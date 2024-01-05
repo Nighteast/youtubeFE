@@ -355,8 +355,10 @@ function BoardView() {
         <Center>
           <Flex m={2} ml={0} gap={5}>
             {/* 유튜브 영상 출력 */}
-            {/*<YoutubeInfo link={board.link} extraVideo={true} />*/}
-            <ReactPlayer
+            <Box w={"640px"} h={"360px"}>
+              <YoutubeInfo link={board.link} extraVideo={true} />
+            </Box>
+            {/*<ReactPlayer
               className="video-container"
               url={board.link}
               config={{
@@ -366,7 +368,7 @@ function BoardView() {
                   },
                 },
               }}
-            />
+            />*/}
             <Box justifyContent={"center"}>{renderChannelInfo()}</Box>
           </Flex>
         </Center>

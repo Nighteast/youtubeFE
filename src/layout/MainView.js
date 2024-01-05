@@ -430,19 +430,22 @@ export function MainView() {
                     >
                       추천글 : {mainShowTitle} >>
                     </Text>
-                    <ReactPlayer
-                      className="video-container"
-                      url={mainShowLink}
-                      width={"900px"}
-                      height={"500px"}
-                      config={{
-                        youtube: {
-                          playerVars: {
-                            autoplay: 0,
-                          },
-                        },
-                      }}
-                    />
+                    <Box w={"900px"} h={"500px"}>
+                      <YoutubeInfo link={mainShowLink} extraVideo={true} />
+                    </Box>
+                    {/*<ReactPlayer*/}
+                    {/*  className="video-container"*/}
+                    {/*  url={mainShowLink}*/}
+                    {/*  width={"900px"}*/}
+                    {/*  height={"500px"}*/}
+                    {/*  config={{*/}
+                    {/*    youtube: {*/}
+                    {/*      playerVars: {*/}
+                    {/*        autoplay: 0,*/}
+                    {/*      },*/}
+                    {/*    },*/}
+                    {/*  }}*/}
+                    {/*/>*/}
                   </>
                 )}
               </Box>

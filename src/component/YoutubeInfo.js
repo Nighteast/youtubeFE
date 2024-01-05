@@ -1,9 +1,10 @@
 import YouTube from "react-youtube";
 import { Box, Img, Spinner, Tooltip } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentDots, faComments } from "@fortawesome/free-solid-svg-icons";
+import ReactPlayer from "react-player";
 
 // 유튜브 정보 추출 컴포넌트 - 썸네일, 영상을 추출합니다.
 function YoutubeInfo({
@@ -185,7 +186,20 @@ function YoutubeInfo({
       )}
       {/* 유튜브 영상 출력 => extraVideo를 true로 설정 */}
       {extraVideo && videoId !== null && (
-        <YouTube videoId={videoId} opts={opts} />
+        <ReactPlayer
+          className="video-container"
+          url={link}
+          width={"100%"}
+          height={"100%"}
+          config={{
+            youtube: {
+              playerVars: {
+                autoplay: 0,
+                controls: 1,
+              },
+            },
+          }}
+        />
       )}
     </Box>
   );
