@@ -311,6 +311,7 @@ function BoardView() {
   }
 
   // 링크 복사 버튼 클릭
+  // TODO : navigator.clipboard.writeText 함수는 보안상의 이유로 HTTPS에서만 동작.
   function handleCopyClick() {
     navigator.clipboard
       .writeText(board.link)
