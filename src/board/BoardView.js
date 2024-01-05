@@ -410,9 +410,10 @@ function BoardView() {
             >
               채널로 이동
             </Button>
-            <Button size={"sm"} onClick={handleCopyClick} colorScheme="blue">
+            {/* 보안상 함수 작동 이슈로 주석 처리 */}
+            {/*<Button size={"sm"} onClick={handleCopyClick} colorScheme="blue">
               유튜브 링크 복사
-            </Button>
+            </Button>*/}
           </Box>
         </Flex>
         <Text color={"white"} fontWeight={"bold"} mb={"5px"}>
